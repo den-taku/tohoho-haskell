@@ -188,6 +188,49 @@
 -- loop n action = do { action; loop (n - 1) action }
 -- main = loop 10 $ putStrLn "Hello!"
 
-import Control.Monad
-main = do
-    replicateM_ 3 $ putStrLn "Hello!"
+-- import Control.Monad
+-- main = do
+--     replicateM_ 3 $ putStrLn "Hello!"
+
+-- data Color = Red | Green | Blue deriving (Show, Eq)
+-- main = do 
+--     let c = Red
+--     print c
+--     let x = Red
+--     let y = Green
+--     if x == y then print "Equal" else print "Not Equal"
+
+-- data Point = Point Int Int deriving Show
+
+-- addPoint (Point x1 y1) (Point x2 y2) = Point (x1 + x2) (y1 + y2)
+
+-- main = do
+--     let a = Point 100 200
+--         b = Point 300 400
+--         c = addPoint a b
+--     print c
+
+-- data Point = Point { x, y :: Int } deriving Show
+-- main = do
+--     let a = Point { x = 100, y = 200 }
+--     print a
+
+-- data Point a = Point a a deriving Show
+-- main = do
+--     print $ Point 100 200
+--     print $ Point 100.0 200.0
+--     print $ Point "hoge" "fuga"
+
+-- data Figure = Rect { x1, y1, x2, y2 :: Int }
+--             | Circle {x, y, r :: Int }
+--             deriving Show
+
+-- area :: Figure -> Double
+-- area (Rect x1 y1 x2 y2) = fromIntegral ((x2 - x1) * (y2 - y1))
+-- area (Circle x y r) = (fromIntegral(r) * fromIntegral(r) * 3.14)
+
+-- main = do 
+--     let a = Rect { x1 = 100, y1 = 100, x2 = 200, y2 = 200 }
+--         b = Circle { x = 100, y = 100, r = 50 }
+--     print $ area a
+--     print $ area b
