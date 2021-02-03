@@ -109,6 +109,18 @@
 -- func 3 = "Three"
 -- main = print $ func 1
 
-fact 0 = 1
-fact n = n * fact (n - 1)
-main = print $ fact 5
+-- fact 0 = 1
+-- fact n = n * fact (n - 1)
+-- main = print $ fact 5
+
+-- foo x
+--     | x == 1 = "One"
+--     | x == 2 = "Two"
+--     | x == 3 = "Three"
+--     | otherwise = "More..."
+-- main = putStrLn $ foo 2
+
+foo x | x >= 5 = x - 5
+main = do 
+    print $ foo 5
+    print $ foo 4
