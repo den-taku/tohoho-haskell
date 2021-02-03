@@ -332,12 +332,45 @@
 --     print $ (add 1 2 3)
 --     print $ (add 1) 2 3
 
-add1 :: Int -> Int -> Int -> Int
-add1 x y z = x + y + z
-add2 :: Int -> Int -> Int -> Int
-add2 = \x -> \y -> \z -> x + y + z
-add (x, y) = x + y
+-- add1 :: Int -> Int -> Int -> Int
+-- add1 x y z = x + y + z
+-- add2 :: Int -> Int -> Int -> Int
+-- add2 = \x -> \y -> \z -> x + y + z
+-- add (x, y) = x + y
+-- main = do
+--     print $ add1 1 2 3
+--     print $ add2 1 2 3
+--     print $ add (3, 5)
+
+-- fn x y z = do { print x; print y }
+-- main = fn (1+2) (3+4) (5+6)
+
+-- main = print $ take 5 [1..]
+
+-- import Foreign.C.Types
+
+-- foreign import ccall "plus" c_plus :: CInt -> IO CInt
+
+-- plus :: Int -> IO Int
+-- plus = fmap fromIntegral . c_plus . fromIntegral
+
+-- main :: IO ()
+-- main = do
+--     print =<< plus 5
+
+-- main = print $ 10 `mod` 5 == 0 &&  3 `mod` 3 == 0
+
+-- judge x 
+--     | (x `mod` 3 == 0 && x `mod` 5 == 0) = "FizzBuzz"
+--     | x `mod` 3 == 0 = "Fizz"
+--     | x `mod` 5 == 0 = "Buzz"
+--     | otherwise = "" ++ x
+-- print_judge = print . judge
+
+judge x = if x `mod` 3 == 0 then "Fizz" else "" ++ if x `mod` 5 == 0 then "Buzz" else ""
+print_judge = print . judge
+
+loop n action = do { action n; loop (n+1) action }
+
 main = do
-    print $ add1 1 2 3
-    print $ add2 1 2 3
-    print $ add (3, 5)
+    loop 1 print_judge
