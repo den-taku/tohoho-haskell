@@ -48,14 +48,18 @@
 --     print c;
 -- }
 
-a = (1, 'a', "ABC")
-func = return ()
--- b = fst (1, 'a', "ABC")
--- c = snd (1, 'a', "ABC")
-(_, _, x) = (1, 'a', "ABC")
+-- a = (1, 'a', "ABC")
+-- func = return ()
+-- -- b = fst (1, 'a', "ABC")
+-- -- c = snd (1, 'a', "ABC")
+-- (_, _, x) = (1, 'a', "ABC")
+-- main = do 
+--     print a
+--     func
+--     print x
+--     -- print b
+--     -- print c
+
+a = 3 `div` 1
 main = do 
     print a
-    func
-    print x
-    -- print b
-    -- print c
