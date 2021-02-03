@@ -284,7 +284,14 @@
 --     -- print $ fmap fn (2, 3)
 --     print $ fn <$> (2, 3)
 
+-- main = do
+--     print $ pure (*2) <*> Just 5
+--     print $ pure (*2) <*> [1, 2, 3]
+--     print $ [(*2), (*3)] <*> [1, 2, 3]
+
+fn x = return (2 * x)
+
 main = do
-    print $ pure (*2) <*> Just 5
-    print $ pure (*2) <*> [1, 2, 3]
-    print $ [(*2), (*3)] <*> [1, 2, 3]
+    print $ [1, 2, 3] >>= fn
+    print $ Just 5 >>= fn
+    print $ Nothing >>= fn
