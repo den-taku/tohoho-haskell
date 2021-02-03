@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 02936738054a3f16c9256592063f652ed4c0dc9a2a77f5b48203d467a087ccf8
+-- hash: c24ac57bab998076327763a5fb018df870eefcbfeca8d890eed69c3c7b639908
 
 name:           sample2
 version:        0.1.0.0
@@ -34,6 +34,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , containers
   default-language: Haskell2010
 
 executable sample2-exe
@@ -45,6 +46,7 @@ executable sample2-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , containers
     , sample2
   default-language: Haskell2010
 
@@ -58,5 +60,6 @@ test-suite sample2-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , containers
     , sample2
   default-language: Haskell2010
