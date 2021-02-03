@@ -183,3 +183,11 @@
 
 -- import Data.Char as Ch hiding (ord)
 -- main = do {print $ ord 'A'}
+
+-- loop 0 action = return ()
+-- loop n action = do { action; loop (n - 1) action }
+-- main = loop 10 $ putStrLn "Hello!"
+
+import Control.Monad
+main = do
+    replicateM_ 3 $ putStrLn "Hello!"
