@@ -97,9 +97,18 @@
 -- fact n = n * fact (n - 1)
 -- main = print $ fact 5
 
-main = do 
-    print c
-        where
-            c = a + b
-            a = (\x -> x * x) 5
-            b = (\(x , y) -> x * y) (2, 3)
+-- main = do 
+--     print c
+--         where
+--             c = a + b
+--             a = (\x -> x * x) 5
+--             b = (\(x , y) -> x * y) (2, 3)
+
+-- func 1 = "One"
+-- func 2 = "Two"
+-- func 3 = "Three"
+-- main = print $ func 1
+
+fact 0 = 1
+fact n = n * fact (n - 1)
+main = print $ fact 5
