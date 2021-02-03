@@ -244,21 +244,31 @@
 -- type String = [Char]
 -- type = Address = None | Addr String
 
-{-# LANGUAGE FlexibleInstances #-}
+-- {-# LANGUAGE FlexibleInstances #-}
 
-class Foo a where
-    foo :: a -> String
-instance Foo Bool where
-    foo True = "Bool: True"
-    foo False = "Bool: False"
-instance Foo Int where
-    foo x = "Int: " ++ show x
-instance Foo Char where
-    foo x = "Char: " ++ [x]
-instance Foo String where
-    foo x = "String: " ++ x
+-- class Foo a where
+--     foo :: a -> String
+-- instance Foo Bool where
+--     foo True = "Bool: True"
+--     foo False = "Bool: False"
+-- instance Foo Int where
+--     foo x = "Int: " ++ show x
+-- instance Foo Char where
+--     foo x = "Char: " ++ [x]
+-- instance Foo String where
+--     foo x = "String: " ++ x
+-- main = do
+--     putStrLn $ foo True
+--     putStrLn $ foo (123::Int)
+--     putStrLn $ foo 'A'
+--     putStrLn $ foo "ABC"
+
+fn :: Int -> Maybe String
+fn n
+    | n == 1 = Just "One"
+    | n == 2 = Just "Two"
+    | otherwise = Nothing
 main = do
-    putStrLn $ foo True
-    putStrLn $ foo (123::Int)
-    putStrLn $ foo 'A'
-    putStrLn $ foo "ABC"
+    print $ fn 1
+    print $ fn 2
+    print $ fn 3
