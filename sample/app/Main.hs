@@ -263,12 +263,23 @@
 --     putStrLn $ foo 'A'
 --     putStrLn $ foo "ABC"
 
-fn :: Int -> Maybe String
-fn n
-    | n == 1 = Just "One"
-    | n == 2 = Just "Two"
-    | otherwise = Nothing
+-- fn :: Int -> Maybe String
+-- fn n
+--     | n == 1 = Just "One"
+--     | n == 2 = Just "Two"
+--     | otherwise = Nothing
+-- main = do
+--     print $ fn 1
+--     print $ fn 2
+--     print $ fn 3
+
+fn n = n * 2
 main = do
-    print $ fn 1
-    print $ fn 2
-    print $ fn 3
+    -- print $ fmap fn [1, 2, 3]
+    print $ fn <$> [1, 2, 3]
+    -- print $ fmap fn Nothing
+    print $ fn <$> Nothing
+    -- print $ fmap fn (Just 5)
+    print $ fn <$> (Just 5)
+    -- print $ fmap fn (2, 3)
+    print $ fn <$> (2, 3)
