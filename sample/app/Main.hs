@@ -289,9 +289,55 @@
 --     print $ pure (*2) <*> [1, 2, 3]
 --     print $ [(*2), (*3)] <*> [1, 2, 3]
 
-fn x = return (2 * x)
+-- fn x = return (2 * x)
 
+-- main = do
+--     print $ [1, 2, 3] >>= fn
+--     print $ Just 5 >>= fn
+--     print $ Nothing >>= fn
+
+-- module MyModule where
+-- add x y = x + y
+
+-- import MyModule
+
+-- main = do
+--     print $ add 3 5
+
+-- fn x = x * 2
+-- ans = map fn [1, 2, 3]
+-- main = print ans
+
+-- tax :: Double -> Double -> Double
+-- tax rate price = rate * price
+-- main = do
+--     print $ tax 0.1 2500
+--     print $ tax 0.1 3500
+
+-- tax :: Double -> Double -> Double
+-- tax rate price = rate * price
+-- jptax = tax 0.1
+-- main = do
+--     print $ jptax 2500
+--     print $ jptax 3500
+
+-- exp2a = (^2)
+-- exp2b = (2^)
+-- main = do
+--     print $ exp2a 5
+--     print $ exp2b 5
+
+-- add x y z = x + y + z
+-- main = do
+--     print $ (add 1 2 3)
+--     print $ (add 1) 2 3
+
+add1 :: Int -> Int -> Int -> Int
+add1 x y z = x + y + z
+add2 :: Int -> Int -> Int -> Int
+add2 = \x -> \y -> \z -> x + y + z
+add (x, y) = x + y
 main = do
-    print $ [1, 2, 3] >>= fn
-    print $ Just 5 >>= fn
-    print $ Nothing >>= fn
+    print $ add1 1 2 3
+    print $ add2 1 2 3
+    print $ add (3, 5)
