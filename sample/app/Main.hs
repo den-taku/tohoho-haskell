@@ -80,6 +80,9 @@
 add :: Int -> Int -> Int
 add x y = x + y
 
+x ^^^ y = x * 1000 + y
+
 main = do
     print (add 3 4)
     print $ add 3 5
+    print $ 2 ^^^ 20
