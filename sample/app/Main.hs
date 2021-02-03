@@ -129,11 +129,29 @@
 -- foo y = 8
 -- main = print $ foo 9
 
-f n = n * 2
-g n = n * 3
-h n = n * 4
--- fn n = f(g(h(n)))
--- fn n = (f . g . h) n
-fn = (f . g . h)
-main = do
-    print $ fn 5
+-- f n = n * 2
+-- g n = n * 3
+-- h n = n * 4
+-- -- fn n = f(g(h(n)))
+-- -- fn n = (f . g . h) n
+-- fn = (f . g . h)
+-- main = do
+--     print $ fn 5
+
+-- func str@(x:xs) = do
+--     print str
+--     print x
+--     print xs
+-- main = do
+--     func "ABCDE"
+
+-- main = do
+--     let msg = "Hello"
+--     putStrLn msg
+
+area_of_circle r =
+    let 
+        pi = 3.14
+    in do
+        r * r * pi
+main = print $ area_of_circle 1.23
