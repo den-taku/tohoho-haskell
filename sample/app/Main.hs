@@ -18,3 +18,8 @@ main = do
     putStrLn "Red"
     putStrLn "Blue"
     putStrLn "Green"
+    putChar 'a'
+    putStr "ABC"
+    putStrLn "ABC"
+    x <- getLine
+    putStrLn x
