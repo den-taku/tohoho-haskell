@@ -82,7 +82,13 @@ add x y = x + y
 
 x ^^^ y = x * 1000 + y
 
+x +++ y = x + y
+x *** y = x * y
+infixl 7 +++
+infixl 6 ***
+
 main = do
     print (add 3 4)
     print $ add 3 5
     print $ 2 ^^^ 20
+    print $ 10 *** 3 +++ 2
