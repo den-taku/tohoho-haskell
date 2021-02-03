@@ -93,6 +93,13 @@
 --     print $ 2 ^^^ 20
 --     print $ 10 *** 3 +++ 2
 
-fact 0 = 1
-fact n = n * fact (n - 1)
-main = print $ fact 5
+-- fact 0 = 1
+-- fact n = n * fact (n - 1)
+-- main = print $ fact 5
+
+main = do 
+    print c
+        where
+            c = a + b
+            a = (\x -> x * x) 5
+            b = (\(x , y) -> x * y) (2, 3)
