@@ -234,3 +234,31 @@
 --         b = Circle { x = 100, y = 100, r = 50 }
 --     print $ area a
 --     print $ area b
+
+-- newtype Pixel = Pixel Int deriving Show
+
+-- main = do 
+--     let a = Pixel 300
+--     print a
+
+-- type String = [Char]
+-- type = Address = None | Addr String
+
+{-# LANGUAGE FlexibleInstances #-}
+
+class Foo a where
+    foo :: a -> String
+instance Foo Bool where
+    foo True = "Bool: True"
+    foo False = "Bool: False"
+instance Foo Int where
+    foo x = "Int: " ++ show x
+instance Foo Char where
+    foo x = "Char: " ++ [x]
+instance Foo String where
+    foo x = "String: " ++ x
+main = do
+    putStrLn $ foo True
+    putStrLn $ foo (123::Int)
+    putStrLn $ foo 'A'
+    putStrLn $ foo "ABC"
