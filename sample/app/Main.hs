@@ -60,19 +60,26 @@
 --     -- print b
 --     -- print c
 
-a = 5 `div` 3
-b = 5 `mod` 3
-c = 122 `rem` 3
-d = 122 `quot` 3
-e = 4 ** 0.5
-main = do 
-    print a
-    print b
-    print c
-    print d
-    print e
-    print (not (3 == 2))
-    print (3 `elem` 2 : 4 : 5: 3 : [1..3])
-    print (3 `notElem` 2 : 4 : 5: 3 : [1..3])
-    print ((+) 3 4)
-    -- print (3 `add` 5)
+-- a = 5 `div` 3
+-- b = 5 `mod` 3
+-- c = 122 `rem` 3
+-- d = 122 `quot` 3
+-- e = 4 ** 0.5
+-- main = do 
+--     print a
+--     print b
+--     print c
+--     print d
+--     print e
+--     print (not (3 == 2))
+--     print (3 `elem` 2 : 4 : 5: 3 : [1..3])
+--     print (3 `notElem` 2 : 4 : 5: 3 : [1..3])
+--     print ((+) 3 4)
+--     -- print (3 `add` 5)
+
+add :: Int -> Int -> Int
+add x y = x + y
+
+main = do
+    print (add 3 4)
+    print $ add 3 5
