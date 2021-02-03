@@ -273,13 +273,18 @@
 --     print $ fn 2
 --     print $ fn 3
 
-fn n = n * 2
+-- fn n = n * 2
+-- main = do
+--     -- print $ fmap fn [1, 2, 3]
+--     print $ fn <$> [1, 2, 3]
+--     -- print $ fmap fn Nothing
+--     print $ fn <$> Nothing
+--     -- print $ fmap fn (Just 5)
+--     print $ fn <$> (Just 5)
+--     -- print $ fmap fn (2, 3)
+--     print $ fn <$> (2, 3)
+
 main = do
-    -- print $ fmap fn [1, 2, 3]
-    print $ fn <$> [1, 2, 3]
-    -- print $ fmap fn Nothing
-    print $ fn <$> Nothing
-    -- print $ fmap fn (Just 5)
-    print $ fn <$> (Just 5)
-    -- print $ fmap fn (2, 3)
-    print $ fn <$> (2, 3)
+    print $ pure (*2) <*> Just 5
+    print $ pure (*2) <*> [1, 2, 3]
+    print $ [(*2), (*3)] <*> [1, 2, 3]
