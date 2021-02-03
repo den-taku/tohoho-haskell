@@ -77,18 +77,22 @@
 --     print ((+) 3 4)
 --     -- print (3 `add` 5)
 
-add :: Int -> Int -> Int
-add x y = x + y
+-- add :: Int -> Int -> Int
+-- add x y = x + y
 
-x ^^^ y = x * 1000 + y
+-- x ^^^ y = x * 1000 + y
 
-x +++ y = x + y
-x *** y = x * y
-infixl 7 +++
-infixl 6 ***
+-- x +++ y = x + y
+-- x *** y = x * y
+-- infixl 7 +++
+-- infixl 6 ***
 
-main = do
-    print (add 3 4)
-    print $ add 3 5
-    print $ 2 ^^^ 20
-    print $ 10 *** 3 +++ 2
+-- main = do
+--     print (add 3 4)
+--     print $ add 3 5
+--     print $ 2 ^^^ 20
+--     print $ 10 *** 3 +++ 2
+
+fact 0 = 1
+fact n = n * fact (n - 1)
+main = print $ fact 5
