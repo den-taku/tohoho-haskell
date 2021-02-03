@@ -120,7 +120,20 @@
 --     | otherwise = "More..."
 -- main = putStrLn $ foo 2
 
-foo x | x >= 5 = x - 5
-main = do 
-    print $ foo 5
-    print $ foo 4
+-- foo x | x >= 5 = x - 5
+-- main = do 
+--     print $ foo 5
+--     print $ foo 4
+
+-- foo x = 9
+-- foo y = 8
+-- main = print $ foo 9
+
+f n = n * 2
+g n = n * 3
+h n = n * 4
+-- fn n = f(g(h(n)))
+-- fn n = (f . g . h) n
+fn = (f . g . h)
+main = do
+    print $ fn 5
