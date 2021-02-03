@@ -149,9 +149,37 @@
 --     let msg = "Hello"
 --     putStrLn msg
 
-area_of_circle r =
-    let 
-        pi = 3.14
-    in do
-        r * r * pi
-main = print $ area_of_circle 1.23
+-- area_of_circle r =
+--     let 
+--         pi = 3.14
+--     in do
+--         r * r * pi
+-- main = print $ area_of_circle 1.23
+
+-- isZero x =
+--     if x == 0 then
+--         "Zero"
+--     else 
+--         "NotZero"
+-- main = putStrLn $ isZero 123
+
+-- getColor x =
+--     case x of
+--         1 -> "Red"
+--         2 -> "Green"
+--         3 -> "Blue"
+--         _ -> "Unknown"
+
+-- main = putStrLn $ getColor 3
+
+-- main = print $ add x y
+--     where
+--         x = 123
+--         y = 456
+--         add x y = x + y
+
+-- import qualified Data.Char  as Ch
+-- main = do { print $ Ch.ord 'A'; print $ Ch.chr 65 }
+
+-- import Data.Char as Ch hiding (ord)
+-- main = do {print $ ord 'A'}
